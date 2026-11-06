@@ -1,0 +1,81 @@
+/* Shared admin and resident navigation. */
+.shell.collapsible-shell>.sidebar{box-sizing:border-box;display:flex;flex-direction:column;position:sticky;top:0;height:100dvh;min-height:0;padding:24px 16px 18px;overflow:hidden;font-family:'DM Sans',Arial,sans-serif}
+.shell.collapsible-shell .sidebar .sidebar-brand-row{flex:none;padding:4px 10px 24px;gap:12px}
+.shell.collapsible-shell .sidebar .brand-side{font-size:25px;letter-spacing:-.8px}
+.shell.collapsible-shell .sidebar .sidebar-brand-row .sidebar-toggle-inside{width:34px;height:34px;flex-basis:34px}
+.shell.collapsible-shell .sidebar .burger-icon{width:17px;gap:4px}
+.shell.collapsible-shell .sidebar .burger-icon i{width:17px;height:2px}
+.shell.collapsible-shell .sidebar .side-label{flex:none;margin:0 0 12px;padding:17px 14px 0;border-top:1px solid #ffffff12;font-size:9px;line-height:1.5;letter-spacing:1.4px;color:#8eb2a1}
+.shell.collapsible-shell .sidebar .side-nav{display:grid;align-content:start;flex:1;min-height:0;gap:5px;margin:0;padding:0 0 18px;overflow-x:hidden;overflow-y:auto;scrollbar-width:thin;scrollbar-color:#ffffff24 transparent}
+.shell.collapsible-shell .sidebar .side-nav a{display:flex;align-items:center;gap:12px;box-sizing:border-box;height:46px;min-height:46px;padding:0 14px;border-radius:9px;font-size:13px;line-height:1.4;font-weight:500;text-decoration:none;color:#bad0c5;flex:none}
+.shell.collapsible-shell .sidebar .side-nav a>.ui-icon{display:block;flex:0 0 19px;width:19px;height:19px;opacity:.85}
+.shell.collapsible-shell .sidebar .side-nav a .nav-arrow{display:none}
+.shell.collapsible-shell .sidebar .side-nav a:hover{background:#ffffff0b;color:#fff}
+.shell.collapsible-shell .sidebar .side-nav a.active{background:#ffffff12;color:#fff;font-weight:600;box-shadow:inset 3px 0 #b6d7b7}
+.shell.collapsible-shell .sidebar .side-nav a:focus-visible,.shell.collapsible-shell .sidebar .logout-button:focus-visible{outline:2px solid #c4ddc7;outline-offset:-2px}
+.shell.collapsible-shell .sidebar .sidebar-bottom{display:flex;flex-direction:column;align-items:stretch;flex:none;gap:14px;margin-top:auto;padding:18px 4px 0;border-top:1px solid #ffffff16;flex-wrap:nowrap}
+.shell.collapsible-shell .sidebar .user-chip{display:flex;align-items:center;gap:11px;width:100%;min-width:0;padding:0 8px;box-sizing:border-box}
+.shell.collapsible-shell .sidebar .user-chip .avatar{display:grid;place-items:center;flex:0 0 36px;width:36px;height:36px;border-radius:10px;background:#d5e6d6;color:#224f3d;font-size:16px;font-weight:600}
+.shell.collapsible-shell .sidebar .sidebar-user-details{display:flex;flex-direction:column;gap:4px;min-width:0}
+.shell.collapsible-shell .sidebar .user-chip b{display:block;max-width:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:12px;font-weight:600;color:#e3eee7;line-height:1.4}
+.shell.collapsible-shell .sidebar .user-chip small{font-size:10px;line-height:1.4;color:#8eaf9e}
+.shell.collapsible-shell .sidebar .logout-button{display:flex;justify-content:flex-start;align-items:center;gap:11px;width:100%;height:42px;min-height:42px;padding:0 14px;border:1px solid #ffffff20;border-radius:9px;background:#ffffff06;color:#c9dbcf;font-family:inherit;font-size:12px;font-weight:500;cursor:pointer}
+.shell.collapsible-shell .sidebar .logout-button:hover{background:#ffffff10;border-color:#ffffff36;color:#fff}
+.shell.collapsible-shell .sidebar .logout-button>.ui-icon{width:18px;height:18px;flex:0 0 18px}
+.shell.collapsible-shell.sidebar-hidden>.sidebar{width:76px;padding:28px 10px 20px}
+.shell.collapsible-shell.sidebar-hidden .sidebar .sidebar-brand-row{flex-direction:column;padding:0 0 36px;gap:44px}
+.shell.collapsible-shell.sidebar-hidden .sidebar .side-label,.shell.collapsible-shell.sidebar-hidden .sidebar .brand-side>span:last-child,.shell.collapsible-shell.sidebar-hidden .sidebar .side-nav a>span,.shell.collapsible-shell.sidebar-hidden .sidebar .sidebar-user-details,.shell.collapsible-shell.sidebar-hidden .sidebar .logout-button>span{display:none}
+.shell.collapsible-shell.sidebar-hidden .sidebar .side-nav{grid-template-columns:minmax(0,1fr);grid-template-rows:none;grid-auto-rows:46px;align-content:start;align-items:start;row-gap:16px;padding-bottom:22px}
+.shell.collapsible-shell.sidebar-hidden .sidebar .side-nav a{justify-content:center;align-self:start;margin:0;padding:0;height:46px;min-height:46px;max-height:46px}
+.shell.collapsible-shell.sidebar-hidden .sidebar .sidebar-bottom{align-items:center;gap:18px;padding:20px 0 0}
+.shell.collapsible-shell.sidebar-hidden .sidebar .user-chip{justify-content:center;padding:0}
+.shell.collapsible-shell.sidebar-hidden .sidebar .logout-button{justify-content:center;width:42px;height:42px;padding:0}
+@media(max-width:720px){.shell.collapsible-shell>.sidebar{position:fixed;inset:0 auto 0 0;width:min(280px,86vw);height:100dvh;padding:24px 16px 18px}.shell.collapsible-shell.sidebar-hidden>.sidebar{width:64px;padding:20px 7px 16px}.shell.collapsible-shell.sidebar-hidden .sidebar .sidebar-brand-row{padding-bottom:28px;gap:38px}.shell.collapsible-shell.sidebar-hidden .sidebar .side-nav{grid-auto-rows:44px;row-gap:12px}.shell.collapsible-shell.sidebar-hidden .sidebar .side-nav a{height:44px;min-height:44px;max-height:44px}}
+@media print{.shell.collapsible-shell>.sidebar{display:none!important}}/* Animate the rail and page together in both directions. */
+.shell.collapsible-shell{grid-template-columns:246px minmax(0,1fr);transition:grid-template-columns 600ms cubic-bezier(.22,1,.36,1)}
+.shell.collapsible-shell>.sidebar{width:100%;transition:width 600ms cubic-bezier(.22,1,.36,1),padding 600ms cubic-bezier(.22,1,.36,1)}
+.shell.collapsible-shell.sidebar-hidden>.sidebar{width:100%}
+.shell.collapsible-shell .sidebar .sidebar-brand-row{position:relative;display:block;box-sizing:border-box;height:66px;min-height:66px;padding:0;transition:height 600ms cubic-bezier(.22,1,.36,1),min-height 600ms cubic-bezier(.22,1,.36,1)}
+.shell.collapsible-shell .sidebar .sidebar-brand-row .brand-side{position:absolute;top:4px;left:10px;transition:left 600ms cubic-bezier(.22,1,.36,1),transform 600ms cubic-bezier(.22,1,.36,1)}
+.shell.collapsible-shell .sidebar .sidebar-brand-row .sidebar-toggle-inside{position:absolute;top:6px;right:10px;transition:top 600ms cubic-bezier(.22,1,.36,1),right 600ms cubic-bezier(.22,1,.36,1),background .2s}
+.shell.collapsible-shell.sidebar-hidden .sidebar .sidebar-brand-row{height:152px;min-height:152px;padding:0}
+.shell.collapsible-shell.sidebar-hidden .sidebar .sidebar-brand-row .brand-side{left:50%;transform:translateX(-50%)}
+.shell.collapsible-shell.sidebar-hidden .sidebar .sidebar-brand-row .sidebar-toggle-inside{top:82px;right:calc(50% - 17px)}
+.shell.collapsible-shell .sidebar .side-nav{transition:row-gap 600ms cubic-bezier(.22,1,.36,1),padding 600ms cubic-bezier(.22,1,.36,1)}
+.shell.collapsible-shell .sidebar .side-nav a{white-space:nowrap;overflow:hidden;transition:padding 600ms cubic-bezier(.22,1,.36,1),gap 600ms cubic-bezier(.22,1,.36,1),background .18s,color .18s}
+.shell.collapsible-shell.sidebar-hidden .sidebar .side-nav a{justify-content:flex-start;padding:0 18px;gap:0}
+.shell.collapsible-shell .sidebar .brand-side>span:last-child,.shell.collapsible-shell .sidebar .side-nav a>span:not(.nav-arrow),.shell.collapsible-shell .sidebar .logout-button>span{display:inline-block;max-width:180px;opacity:1;overflow:hidden;white-space:nowrap;transition:max-width 600ms cubic-bezier(.22,1,.36,1),opacity 220ms ease}
+.shell.collapsible-shell.sidebar-hidden .sidebar .brand-side>span:last-child,.shell.collapsible-shell.sidebar-hidden .sidebar .side-nav a>span:not(.nav-arrow),.shell.collapsible-shell.sidebar-hidden .sidebar .logout-button>span{display:inline-block;max-width:0;opacity:0}
+.shell.collapsible-shell.sidebar-hidden .sidebar .brand-side{gap:0}
+.shell.collapsible-shell .sidebar .brand-side{transition:gap 600ms cubic-bezier(.22,1,.36,1)}
+.shell.collapsible-shell .sidebar .side-label{max-height:44px;opacity:1;overflow:hidden;transition:max-height 600ms cubic-bezier(.22,1,.36,1),padding 600ms cubic-bezier(.22,1,.36,1),margin 600ms cubic-bezier(.22,1,.36,1),opacity 180ms ease}
+.shell.collapsible-shell.sidebar-hidden .sidebar .side-label{display:block;max-height:0;opacity:0;padding:0;margin:0;border:0}
+.shell.collapsible-shell .sidebar .sidebar-bottom,.shell.collapsible-shell .sidebar .user-chip,.shell.collapsible-shell .sidebar .logout-button{transition:padding 600ms cubic-bezier(.22,1,.36,1),gap 600ms cubic-bezier(.22,1,.36,1),width 600ms cubic-bezier(.22,1,.36,1),background .18s}
+.shell.collapsible-shell .sidebar .sidebar-user-details{max-width:180px;opacity:1;overflow:hidden;white-space:nowrap;transition:max-width 600ms cubic-bezier(.22,1,.36,1),opacity 200ms ease}
+.shell.collapsible-shell.sidebar-hidden .sidebar .sidebar-user-details{display:flex;max-width:0;opacity:0}
+.shell.collapsible-shell.sidebar-hidden .sidebar .user-chip,.shell.collapsible-shell.sidebar-hidden .sidebar .logout-button{gap:0}
+@media(max-width:720px){.shell.collapsible-shell>.sidebar{width:min(280px,86vw)}.shell.collapsible-shell.sidebar-hidden>.sidebar{width:64px}.shell.collapsible-shell.sidebar-hidden .sidebar .sidebar-brand-row{height:134px;min-height:134px}.shell.collapsible-shell.sidebar-hidden .sidebar .sidebar-brand-row .sidebar-toggle-inside{top:72px}.shell.collapsible-shell.sidebar-hidden .sidebar .side-nav a{padding-inline:15px}}
+@media(prefers-reduced-motion:reduce){.shell.collapsible-shell,.shell.collapsible-shell>.sidebar,.shell.collapsible-shell .sidebar *{transition:none!important}}
+/* Smooth navigation between workspace pages without delaying link clicks. */
+@view-transition{navigation:auto}
+.shell.collapsible-shell .page-content{animation:workspace-page-enter 420ms cubic-bezier(.22,1,.36,1) both;view-transition-name:workspace-page}
+.shell.collapsible-shell .topbar-title{view-transition-name:workspace-heading}
+.shell.collapsible-shell .sidebar .side-nav a{transition:padding 600ms cubic-bezier(.22,1,.36,1),gap 600ms cubic-bezier(.22,1,.36,1),background-color 300ms ease,color 300ms ease,box-shadow 300ms ease,transform 250ms ease}
+.shell.collapsible-shell .sidebar .side-nav a.active{view-transition-name:workspace-active-link}
+.shell.collapsible-shell .sidebar .side-nav a:hover{transform:translateX(2px)}
+.shell.collapsible-shell .sidebar .side-nav a:active{transform:scale(.97)}
+@keyframes workspace-page-enter{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@keyframes workspace-page-leave{to{opacity:0;transform:translateY(-5px)}}
+::view-transition-old(root),::view-transition-new(root){animation:none;mix-blend-mode:normal}
+::view-transition-group(workspace-active-link),::view-transition-group(workspace-heading){animation-duration:420ms;animation-timing-function:cubic-bezier(.22,1,.36,1)}
+::view-transition-old(workspace-page){animation:workspace-page-leave 180ms ease both}
+::view-transition-new(workspace-page){animation:workspace-page-enter 420ms cubic-bezier(.22,1,.36,1) both}
+@media(prefers-reduced-motion:reduce){.shell.collapsible-shell .page-content{animation:none}.shell.collapsible-shell .sidebar .side-nav a:hover,.shell.collapsible-shell .sidebar .side-nav a:active{transform:none}::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}}
+/* Unread badge stays visible in the collapsed rail. */
+.shell.collapsible-shell .sidebar .side-nav a{position:relative}
+.shell.collapsible-shell .sidebar .side-nav a.has-unread{padding-right:42px}
+.shell.collapsible-shell .sidebar .side-nav a.has-unread>.ui-icon{color:#f1c766;opacity:1}
+.shell.collapsible-shell .sidebar .side-nav .nav-unread-badge{position:absolute;right:11px;top:50%;transform:translateY(-50%);display:flex;align-items:center;justify-content:center;box-sizing:border-box;min-width:19px;height:19px;padding:0 5px;border:2px solid #153f34;border-radius:12px;background:#e65353;color:#fff;font-family:Arial,sans-serif;font-size:10px;line-height:1;font-weight:700;pointer-events:none}
+.shell.collapsible-shell.sidebar-hidden .sidebar .side-nav a.has-unread{padding-right:18px}
+.shell.collapsible-shell.sidebar-hidden .sidebar .side-nav .nav-unread-badge{top:3px;right:4px;transform:none;min-width:18px;height:18px;font-size:9px;padding:0 4px}
+@media(max-width:720px){.shell.collapsible-shell.sidebar-hidden .sidebar .side-nav a.has-unread{padding-right:15px}}

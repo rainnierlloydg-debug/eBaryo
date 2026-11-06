@@ -1,0 +1,4 @@
+/uploads/national-ids/*
+/uploads/profiles/*
+/tests/runtime/*
+!/tests/runtime/.gitkeep

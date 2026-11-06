@@ -1,0 +1,14 @@
+.shell.sidebar-hidden{grid-template-columns:minmax(0,1fr)}
+.topbar-title{display:flex;align-items:center;gap:12px;min-width:0}
+.topbar-title>div{min-width:0}
+.sidebar-toggle{width:36px;height:36px;flex:0 0 auto;display:grid;place-items:center;border:1px solid var(--line);border-radius:4px;background:#fff;color:var(--green-dark);cursor:pointer}
+.sidebar-toggle:hover{background:var(--soft);border-color:#b7cabe}
+.burger-icon{width:16px;display:grid;gap:4px}
+.burger-icon i{height:2px;width:16px;background:currentColor;border-radius:1px}
+@media(max-width:720px){.shell.sidebar-hidden{display:flex;flex-direction:column}.topbar-title{gap:9px}.sidebar-toggle{width:34px;height:34px}}
+.password-control{position:relative;display:block;width:100%}
+.password-control input{padding-right:44px!important}
+.password-toggle{position:absolute;top:50%;right:6px;width:32px;height:32px;display:grid;place-items:center;transform:translateY(-50%);border:0;border-radius:4px;background:transparent;color:#71847a;cursor:pointer}
+.password-toggle:hover{background:var(--soft);color:var(--green-dark)}
+.password-toggle:focus-visible{outline:2px solid var(--green);outline-offset:1px}
+.password-toggle svg{width:19px;height:19px}
